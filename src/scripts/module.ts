@@ -2,5 +2,5 @@
 import "../styles/style.scss";
 
 Hooks.once("init", () => {
-  console.log("Hello world!!!!");
+  console.log("Hello world!");
 });

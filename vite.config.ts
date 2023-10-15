@@ -10,7 +10,7 @@ export default ({ mode }) => {
     build: {
       sourcemap: true,
       rollupOptions: {
-        input: "src/ts/module.ts",
+        input: "src/scripts/module.ts",
         output: {
           dir: "dist/scripts",
           format: "es",
@@ -26,7 +26,10 @@ export default ({ mode }) => {
         watch: ["src/styles/*.scss"],
       }),
       copy({
-        targets: [{ src: "src/templates", dest: "dist" }],
+        targets: [
+          { src: "src/languages", dest: "dist" },
+          { src: "src/templates", dest: "dist" },
+        ],
         hook: "writeBundle",
       }),
     ],
@@ -61,7 +64,7 @@ function updateModuleManifestPlugin(env: any): Plugin {
       }
       await fsPromises.writeFile(
         "dist/module.json",
-        JSON.stringify(manifestJson, null, 4)
+        JSON.stringify(manifestJson, null, 2)
       );
     },
   };
