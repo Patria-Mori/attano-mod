@@ -1,0 +1,16 @@
+{
+  "id": "attano-mod",
+  "title": "The Locke Attano Module",
+  "description": "A module that is all about making playing Locke Attano more convenient",
+  "authors": [
+    {
+      "name": "Jonas Drageset Lindaas"
+    }
+  ],
+  "compatibility": {
+    "minimum": 10,
+    "verified": 10
+  },
+  "esmodules": ["scripts/module.js"],
+  "styles": ["style.css"]
+}
